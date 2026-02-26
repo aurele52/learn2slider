@@ -13,20 +13,20 @@ class Interpreter:
 
     def apply_dir(self, direction):
         newTile = self.env.step(direction)
-        if newTile == Tile.WALL:
-            self.reward = -100
+
+        done = False
+        if newTile in (Tile.WALL, Tile.BODY):
+            reward = -100
+            done = True
             self.env.reset_game()
-        if newTile == Tile.RED:
-            self.reward = -10
-        if newTile == Tile.GREEN:
-            self.reward = 10
-        if newTile == Tile.BODY:
-            self.reward = -100
-            self.env.reset_game()
-        if newTile == Tile.EMPTY:
-            self.reward = -1
-        # print(self.get_state())
-        # print(self.reward)
+        elif newTile == Tile.RED:
+            reward = -10
+        elif newTile == Tile.GREEN:
+            reward = 10
+        else:  # EMPTY
+            reward = -1
+
+        return reward, done
 
     def reset_game(self):
         self.env.reset_game()
