@@ -1,0 +1,239 @@
+(venv) ➜  learn2slider git:(master) ✗ python3 train.py                          
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[SAVE] train/1000-v3.pkl (states=444)
+step=100000 eps=0.1910 states=8201 avgR=-10.711 deaths=10274 green=4546 red=446 avgLen=3.34 | elapsed=00:00:01 speed=99850.2 steps/s eta=00:01:39
+[SAVE] train/100000-v3.pkl (states=8201)
+step=200000 eps=0.1820 states=11878 avgR=-7.793 deaths=7588 green=6795 red=311 avgLen=3.68 | elapsed=00:00:01 speed=103237.2 steps/s eta=00:01:34
+step=300000 eps=0.1730 states=14611 avgR=-7.067 deaths=6911 green=7292 red=299 avgLen=3.86 | elapsed=00:00:02 speed=105002.6 steps/s eta=00:01:32
+step=400000 eps=0.1640 states=16845 avgR=-6.505 deaths=6355 green=7372 red=276 avgLen=3.95 | elapsed=00:00:03 speed=106113.4 steps/s eta=00:01:30
+step=500000 eps=0.1550 states=18828 avgR=-6.119 deaths=6022 green=7857 red=243 avgLen=4.08 | elapsed=00:00:04 speed=106946.9 steps/s eta=00:01:28
+step=600000 eps=0.1460 states=20643 avgR=-5.713 deaths=5623 green=7945 red=228 avgLen=4.16 | elapsed=00:00:05 speed=107882.7 steps/s eta=00:01:27
+step=700000 eps=0.1370 states=22308 avgR=-5.360 deaths=5270 green=7976 red=222 avgLen=4.23 | elapsed=00:00:06 speed=108343.4 steps/s eta=00:01:25
+step=800000 eps=0.1280 states=23856 avgR=-5.193 deaths=5162 green=8514 red=214 avgLen=4.34 | elapsed=00:00:07 speed=108723.6 steps/s eta=00:01:24
+step=900000 eps=0.1190 states=25368 avgR=-4.774 deaths=4753 green=8635 red=208 avgLen=4.47 | elapsed=00:00:08 speed=109167.1 steps/s eta=00:01:23
+step=1000000 eps=0.1100 states=26794 avgR=-4.535 deaths=4533 green=8828 red=204 avgLen=4.56 | elapsed=00:00:09 speed=109133.0 steps/s eta=00:01:22
+[SAVE] train/1000000-v3.pkl (states=26794)
+step=1100000 eps=0.1010 states=28187 avgR=-4.151 deaths=4163 green=8960 red=167 avgLen=4.73 | elapsed=00:00:10 speed=108719.0 steps/s eta=00:01:21
+step=1200000 eps=0.0920 states=29628 avgR=-3.860 deaths=3902 green=9258 red=166 avgLen=4.89 | elapsed=00:00:10 speed=109123.1 steps/s eta=00:01:20
+step=1300000 eps=0.0830 states=30966 avgR=-3.617 deaths=3648 green=9170 red=160 avgLen=4.95 | elapsed=00:00:11 speed=109490.7 steps/s eta=00:01:19
+step=1400000 eps=0.0740 states=32302 avgR=-3.410 deaths=3455 green=9330 red=172 avgLen=5.09 | elapsed=00:00:12 speed=109812.3 steps/s eta=00:01:18
+step=1500000 eps=0.0650 states=33642 avgR=-3.182 deaths=3218 green=9262 red=169 avgLen=5.22 | elapsed=00:00:13 speed=110123.0 steps/s eta=00:01:17
+step=1600000 eps=0.0560 states=34932 avgR=-2.907 deaths=2956 green=9413 red=174 avgLen=5.33 | elapsed=00:00:14 speed=110349.0 steps/s eta=00:01:16
+step=1700000 eps=0.0470 states=36233 avgR=-2.592 deaths=2651 green=9515 red=154 avgLen=5.57 | elapsed=00:00:15 speed=110634.2 steps/s eta=00:01:15
+step=1800000 eps=0.0380 states=37583 avgR=-2.449 deaths=2534 green=9752 red=147 avgLen=5.74 | elapsed=00:00:16 speed=110889.3 steps/s eta=00:01:13
+step=1900000 eps=0.0290 states=39091 avgR=-2.137 deaths=2217 green=9730 red=134 avgLen=6.03 | elapsed=00:00:17 speed=111143.2 steps/s eta=00:01:12
+step=2000000 eps=0.0200 states=40510 avgR=-1.918 deaths=2009 green=9855 red=144 avgLen=6.21 | elapsed=00:00:17 speed=111477.3 steps/s eta=00:01:11
+step=2100000 eps=0.0200 states=41965 avgR=-1.766 deaths=1872 green=10007 red=148 avgLen=6.51 | elapsed=00:00:18 speed=111719.1 steps/s eta=00:01:10
+step=2200000 eps=0.0200 states=43384 avgR=-1.722 deaths=1815 green=9902 red=157 avgLen=6.49 | elapsed=00:00:19 speed=111991.0 steps/s eta=00:01:09
+step=2300000 eps=0.0200 states=44712 avgR=-1.705 deaths=1769 green=9630 red=142 avgLen=6.48 | elapsed=00:00:20 speed=112258.5 steps/s eta=00:01:08
+step=2400000 eps=0.0200 states=46007 avgR=-1.632 deaths=1714 green=9811 red=155 avgLen=6.65 | elapsed=00:00:21 speed=112427.8 steps/s eta=00:01:07
+step=2500000 eps=0.0200 states=47202 avgR=-1.655 deaths=1691 green=9381 red=144 avgLen=6.63 | elapsed=00:00:22 speed=112575.9 steps/s eta=00:01:06
+step=2600000 eps=0.0200 states=48403 avgR=-1.675 deaths=1763 green=9846 red=142 avgLen=6.63 | elapsed=00:00:23 speed=112763.9 steps/s eta=00:01:05
+step=2700000 eps=0.0200 states=49583 avgR=-1.663 deaths=1736 green=9727 red=156 avgLen=6.66 | elapsed=00:00:23 speed=112940.1 steps/s eta=00:01:04
+step=2800000 eps=0.0200 states=50763 avgR=-1.566 deaths=1643 green=9754 red=141 avgLen=6.83 | elapsed=00:00:24 speed=113102.5 steps/s eta=00:01:03
+step=2900000 eps=0.0200 states=51879 avgR=-1.533 deaths=1635 green=9981 red=134 avgLen=7.08 | elapsed=00:00:25 speed=113278.6 steps/s eta=00:01:02
+step=3000000 eps=0.0200 states=53004 avgR=-1.510 deaths=1620 green=10061 red=149 avgLen=7.03 | elapsed=00:00:26 speed=113429.2 steps/s eta=00:01:01
+step=3100000 eps=0.0200 states=54161 avgR=-1.513 deaths=1659 green=10379 red=138 avgLen=7.19 | elapsed=00:00:27 speed=113576.5 steps/s eta=00:01:00
+step=3200000 eps=0.0200 states=55291 avgR=-1.491 deaths=1624 green=10265 red=143 avgLen=7.21 | elapsed=00:00:28 speed=113692.6 steps/s eta=00:00:59
+step=3300000 eps=0.0200 states=56365 avgR=-1.487 deaths=1626 green=10319 red=136 avgLen=7.15 | elapsed=00:00:28 speed=113803.4 steps/s eta=00:00:58
+step=3400000 eps=0.0200 states=57408 avgR=-1.466 deaths=1550 green=9804 red=108 avgLen=7.26 | elapsed=00:00:29 speed=113904.1 steps/s eta=00:00:57
+step=3500000 eps=0.0200 states=58447 avgR=-1.431 deaths=1540 green=10056 red=143 avgLen=7.37 | elapsed=00:00:30 speed=114031.5 steps/s eta=00:00:57
+step=3600000 eps=0.0200 states=59496 avgR=-1.454 deaths=1571 green=10118 red=134 avgLen=7.37 | elapsed=00:00:31 speed=114129.9 steps/s eta=00:00:56
+step=3700000 eps=0.0200 states=60434 avgR=-1.420 deaths=1522 green=9996 red=141 avgLen=7.38 | elapsed=00:00:32 speed=114194.5 steps/s eta=00:00:55
+step=3800000 eps=0.0200 states=61438 avgR=-1.368 deaths=1471 green=10008 red=138 avgLen=7.41 | elapsed=00:00:33 speed=114330.7 steps/s eta=00:00:54
+step=3900000 eps=0.0200 states=62449 avgR=-1.436 deaths=1544 green=10036 red=128 avgLen=7.32 | elapsed=00:00:34 speed=114390.5 steps/s eta=00:00:53
+step=4000000 eps=0.0200 states=63362 avgR=-1.361 deaths=1472 green=10073 red=133 avgLen=7.65 | elapsed=00:00:34 speed=114456.7 steps/s eta=00:00:52
+step=4100000 eps=0.0200 states=64308 avgR=-1.345 deaths=1489 green=10376 red=138 avgLen=7.70 | elapsed=00:00:35 speed=114540.0 steps/s eta=00:00:51
+step=4200000 eps=0.0200 states=65231 avgR=-1.308 deaths=1446 green=10316 red=128 avgLen=7.75 | elapsed=00:00:36 speed=114619.6 steps/s eta=00:00:50
+step=4300000 eps=0.0200 states=66145 avgR=-1.310 deaths=1427 green=10143 red=143 avgLen=7.80 | elapsed=00:00:37 speed=114685.4 steps/s eta=00:00:49
+step=4400000 eps=0.0200 states=66967 avgR=-1.368 deaths=1446 green=9768 red=122 avgLen=7.49 | elapsed=00:00:38 speed=114747.9 steps/s eta=00:00:48
+step=4500000 eps=0.0200 states=67888 avgR=-1.294 deaths=1431 green=10312 red=130 avgLen=7.83 | elapsed=00:00:39 speed=114783.8 steps/s eta=00:00:47
+step=4600000 eps=0.0200 states=68741 avgR=-1.343 deaths=1472 green=10238 red=127 avgLen=7.71 | elapsed=00:00:40 speed=114802.8 steps/s eta=00:00:47
+step=4700000 eps=0.0200 states=69602 avgR=-1.265 deaths=1409 green=10371 red=116 avgLen=7.82 | elapsed=00:00:40 speed=114859.3 steps/s eta=00:00:46
+step=4800000 eps=0.0200 states=70359 avgR=-1.331 deaths=1427 green=9940 red=131 avgLen=7.55 | elapsed=00:00:41 speed=114909.9 steps/s eta=00:00:45
+step=4900000 eps=0.0200 states=71162 avgR=-1.278 deaths=1410 green=10265 red=130 avgLen=7.82 | elapsed=00:00:42 speed=114949.2 steps/s eta=00:00:44
+step=5000000 eps=0.0200 states=72005 avgR=-1.276 deaths=1392 green=10119 red=118 avgLen=7.85 | elapsed=00:00:43 speed=115021.7 steps/s eta=00:00:43
+[SAVE] train/5000000-v3.pkl (states=72005)
+step=5100000 eps=0.0200 states=72786 avgR=-1.278 deaths=1398 green=10159 red=129 avgLen=7.96 | elapsed=00:00:44 speed=114820.6 steps/s eta=00:00:42
+step=5200000 eps=0.0200 states=73630 avgR=-1.256 deaths=1419 green=10549 red=129 avgLen=7.99 | elapsed=00:00:45 speed=114866.5 steps/s eta=00:00:41
+step=5300000 eps=0.0200 states=74483 avgR=-1.196 deaths=1333 green=10322 red=129 avgLen=8.12 | elapsed=00:00:46 speed=114930.2 steps/s eta=00:00:40
+step=5400000 eps=0.0200 states=75304 avgR=-1.237 deaths=1386 green=10406 red=104 avgLen=8.05 | elapsed=00:00:46 speed=114962.2 steps/s eta=00:00:40
+step=5500000 eps=0.0200 states=76150 avgR=-1.236 deaths=1429 green=10813 red=122 avgLen=8.25 | elapsed=00:00:47 speed=115013.1 steps/s eta=00:00:39
+step=5600000 eps=0.0200 states=76902 avgR=-1.187 deaths=1319 green=10273 red=126 avgLen=8.12 | elapsed=00:00:48 speed=115080.9 steps/s eta=00:00:38
+step=5700000 eps=0.0200 states=77674 avgR=-1.196 deaths=1329 green=10271 red=113 avgLen=8.20 | elapsed=00:00:49 speed=115134.8 steps/s eta=00:00:37
+step=5800000 eps=0.0200 states=78395 avgR=-1.253 deaths=1382 green=10244 red=132 avgLen=8.04 | elapsed=00:00:50 speed=115168.6 steps/s eta=00:00:36
+step=5900000 eps=0.0200 states=79147 avgR=-1.225 deaths=1326 green=9977 red=109 avgLen=8.13 | elapsed=00:00:51 speed=115201.4 steps/s eta=00:00:35
+step=6000000 eps=0.0200 states=79897 avgR=-1.202 deaths=1301 green=9965 red=116 avgLen=7.98 | elapsed=00:00:52 speed=114949.5 steps/s eta=00:00:34
+step=6100000 eps=0.0200 states=80670 avgR=-1.148 deaths=1295 green=10413 red=131 avgLen=8.48 | elapsed=00:00:53 speed=114856.9 steps/s eta=00:00:33
+step=6200000 eps=0.0200 states=81415 avgR=-1.208 deaths=1291 green=9807 red=101 avgLen=8.17 | elapsed=00:00:53 speed=114822.9 steps/s eta=00:00:33
+step=6300000 eps=0.0200 states=82126 avgR=-1.193 deaths=1332 green=10342 red=132 avgLen=8.18 | elapsed=00:00:54 speed=114888.3 steps/s eta=00:00:32
+step=6400000 eps=0.0200 states=82857 avgR=-1.164 deaths=1283 green=10167 red=139 avgLen=8.38 | elapsed=00:00:55 speed=114975.3 steps/s eta=00:00:31
+step=6500000 eps=0.0200 states=83569 avgR=-1.157 deaths=1291 green=10305 red=134 avgLen=8.41 | elapsed=00:00:56 speed=115017.7 steps/s eta=00:00:30
+step=6600000 eps=0.0200 states=84273 avgR=-1.162 deaths=1281 green=10157 red=118 avgLen=8.46 | elapsed=00:00:57 speed=115087.3 steps/s eta=00:00:29
+step=6700000 eps=0.0200 states=85014 avgR=-1.159 deaths=1279 green=10173 red=129 avgLen=8.45 | elapsed=00:00:58 speed=115145.5 steps/s eta=00:00:28
+step=6800000 eps=0.0200 states=85682 avgR=-1.137 deaths=1299 green=10522 red=98 avgLen=8.48 | elapsed=00:00:59 speed=115238.4 steps/s eta=00:00:27
+step=6900000 eps=0.0200 states=86400 avgR=-1.174 deaths=1316 green=10361 red=122 avgLen=8.45 | elapsed=00:00:59 speed=115289.2 steps/s eta=00:00:26
+step=7000000 eps=0.0200 states=87067 avgR=-1.098 deaths=1216 green=10132 red=98 avgLen=8.59 | elapsed=00:01:00 speed=115374.2 steps/s eta=00:00:26
+step=7100000 eps=0.0200 states=87750 avgR=-1.127 deaths=1244 green=10134 red=114 avgLen=8.49 | elapsed=00:01:01 speed=115434.6 steps/s eta=00:00:25
+step=7200000 eps=0.0200 states=88428 avgR=-1.181 deaths=1291 green=10064 red=112 avgLen=8.28 | elapsed=00:01:02 speed=115479.6 steps/s eta=00:00:24
+step=7300000 eps=0.0200 states=89081 avgR=-1.145 deaths=1272 green=10227 red=118 avgLen=8.57 | elapsed=00:01:03 speed=115525.5 steps/s eta=00:00:23
+step=7400000 eps=0.0200 states=89818 avgR=-1.105 deaths=1225 green=10160 red=111 avgLen=8.67 | elapsed=00:01:04 speed=115590.8 steps/s eta=00:00:22
+step=7500000 eps=0.0200 states=90498 avgR=-1.099 deaths=1204 green=10032 red=112 avgLen=8.60 | elapsed=00:01:04 speed=115644.0 steps/s eta=00:00:21
+step=7600000 eps=0.0200 states=91128 avgR=-1.142 deaths=1236 green=9922 red=111 avgLen=8.40 | elapsed=00:01:05 speed=115691.1 steps/s eta=00:00:20
+step=7700000 eps=0.0200 states=91772 avgR=-1.139 deaths=1282 green=10372 red=122 avgLen=8.55 | elapsed=00:01:06 speed=115710.2 steps/s eta=00:00:19
+step=7800000 eps=0.0200 states=92387 avgR=-1.060 deaths=1176 green=10119 red=102 avgLen=8.62 | elapsed=00:01:07 speed=115772.1 steps/s eta=00:00:19
+step=7900000 eps=0.0200 states=93028 avgR=-1.083 deaths=1216 green=10288 red=124 avgLen=8.71 | elapsed=00:01:08 speed=115801.2 steps/s eta=00:00:18
+step=8000000 eps=0.0200 states=93730 avgR=-1.097 deaths=1247 green=10440 red=126 avgLen=8.78 | elapsed=00:01:09 speed=115820.0 steps/s eta=00:00:17
+step=8100000 eps=0.0200 states=94312 avgR=-1.132 deaths=1261 green=10247 red=123 avgLen=8.58 | elapsed=00:01:09 speed=115867.7 steps/s eta=00:00:16
+step=8200000 eps=0.0200 states=94932 avgR=-1.147 deaths=1260 green=10088 red=105 avgLen=8.55 | elapsed=00:01:10 speed=115920.0 steps/s eta=00:00:15
+step=8300000 eps=0.0200 states=95507 avgR=-1.134 deaths=1249 green=10118 red=115 avgLen=8.65 | elapsed=00:01:11 speed=115968.1 steps/s eta=00:00:14
+step=8400000 eps=0.0200 states=96134 avgR=-1.082 deaths=1217 green=10300 red=112 avgLen=8.89 | elapsed=00:01:12 speed=116015.6 steps/s eta=00:00:13
+step=8500000 eps=0.0200 states=96734 avgR=-1.054 deaths=1165 green=10080 red=103 avgLen=8.88 | elapsed=00:01:13 speed=116068.2 steps/s eta=00:00:12
+step=8600000 eps=0.0200 states=97342 avgR=-1.102 deaths=1212 green=10070 red=112 avgLen=8.65 | elapsed=00:01:14 speed=116097.8 steps/s eta=00:00:12
+step=8700000 eps=0.0200 states=97913 avgR=-1.052 deaths=1188 green=10316 red=116 avgLen=8.83 | elapsed=00:01:14 speed=116142.3 steps/s eta=00:00:11
+step=8800000 eps=0.0200 states=98513 avgR=-1.036 deaths=1172 green=10327 red=127 avgLen=8.91 | elapsed=00:01:15 speed=116178.8 steps/s eta=00:00:10
+step=8900000 eps=0.0200 states=99166 avgR=-1.078 deaths=1243 green=10564 red=107 avgLen=9.00 | elapsed=00:01:16 speed=116214.3 steps/s eta=00:00:09
+step=9000000 eps=0.0200 states=99725 avgR=-1.093 deaths=1229 green=10304 red=103 avgLen=8.83 | elapsed=00:01:17 speed=116244.4 steps/s eta=00:00:08
+step=9100000 eps=0.0200 states=100355 avgR=-1.062 deaths=1226 green=10567 red=118 avgLen=9.03 | elapsed=00:01:18 speed=116252.2 steps/s eta=00:00:07
+step=9200000 eps=0.0200 states=100980 avgR=-1.053 deaths=1186 green=10293 red=121 avgLen=8.94 | elapsed=00:01:19 speed=116283.7 steps/s eta=00:00:06
+step=9300000 eps=0.0200 states=101576 avgR=-1.003 deaths=1147 green=10394 red=115 avgLen=8.94 | elapsed=00:01:19 speed=116324.8 steps/s eta=00:00:06
+step=9400000 eps=0.0200 states=102098 avgR=-1.125 deaths=1214 green=9886 red=121 avgLen=8.56 | elapsed=00:01:20 speed=116372.3 steps/s eta=00:00:05
+step=9500000 eps=0.0200 states=102699 avgR=-1.093 deaths=1246 green=10469 red=119 avgLen=8.75 | elapsed=00:01:21 speed=116398.2 steps/s eta=00:00:04
+step=9600000 eps=0.0200 states=103260 avgR=-1.102 deaths=1193 green=9890 red=101 avgLen=8.77 | elapsed=00:01:22 speed=116421.9 steps/s eta=00:00:03
+step=9700000 eps=0.0200 states=103838 avgR=-1.082 deaths=1220 green=10322 red=106 avgLen=8.76 | elapsed=00:01:23 speed=116469.9 steps/s eta=00:00:02
+step=9800000 eps=0.0200 states=104413 avgR=-1.091 deaths=1240 green=10438 red=127 avgLen=8.86 | elapsed=00:01:24 speed=116502.5 steps/s eta=00:00:01
+step=9900000 eps=0.0200 states=105011 avgR=-1.041 deaths=1157 green=10129 red=109 avgLen=9.00 | elapsed=00:01:24 speed=116554.6 steps/s eta=00:00:00
+step=10000000 eps=0.0200 states=105622 avgR=-1.060 deaths=1188 green=10264 red=145 avgLen=8.99 | elapsed=00:01:25 speed=116585.8 steps/s eta=00:00:00
+[SAVE] train/10000000-v3.pkl (states=105622)
+[DONE] total_steps=10000000 total_time=85.95s
+(venv) ➜  learn2slider git:(master) ✗ python3 play_1000.py train/10000000-v3.pkl
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[LOAD] train/10000000-v3.pkl | states=105622
+
+=== RESULTATS ===
+Parties: 1000
+Taille moyenne fin: 14.481
+Min: 3
+Max: 35
+Std: 6.927
+
+
+(venv) ➜  learn2slider git:(master) ✗ python3 train.py                          
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[SAVE] train/1000-v4.pkl (states=450)
+step=100000 eps=0.1910 states=12173 avgR=-1.124 deaths=468 green=3682 red=726 avgLen=5.99 | elapsed=00:00:00 speed=116953.5 steps/s eta=00:01:24
+[SAVE] train/100000-v4.pkl (states=12173)
+step=200000 eps=0.1820 states=19497 avgR=-0.995 deaths=562 green=5703 red=731 avgLen=7.84 | elapsed=00:00:01 speed=116550.1 steps/s eta=00:01:24
+step=300000 eps=0.1730 states=25142 avgR=-0.917 deaths=594 green=6623 red=635 avgLen=8.53 | elapsed=00:00:02 speed=116359.9 steps/s eta=00:01:23
+step=400000 eps=0.1640 states=29852 avgR=-0.873 deaths=605 green=7088 red=600 avgLen=8.97 | elapsed=00:00:03 speed=115899.5 steps/s eta=00:01:22
+step=500000 eps=0.1550 states=34068 avgR=-0.837 deaths=630 green=7588 red=529 avgLen=9.30 | elapsed=00:00:04 speed=115191.9 steps/s eta=00:01:22
+step=600000 eps=0.1460 states=37930 avgR=-0.800 deaths=616 green=7800 red=539 avgLen=9.66 | elapsed=00:00:05 speed=115562.9 steps/s eta=00:01:21
+step=700000 eps=0.1370 states=41534 avgR=-0.764 deaths=604 green=7975 red=485 avgLen=10.07 | elapsed=00:00:06 speed=116214.4 steps/s eta=00:01:20
+step=800000 eps=0.1280 states=44798 avgR=-0.721 deaths=599 green=8312 red=466 avgLen=10.44 | elapsed=00:00:06 speed=116801.3 steps/s eta=00:01:18
+step=900000 eps=0.1190 states=47883 avgR=-0.706 deaths=591 green=8378 red=473 avgLen=10.66 | elapsed=00:00:07 speed=117195.6 steps/s eta=00:01:17
+step=1000000 eps=0.1100 states=50842 avgR=-0.671 deaths=596 green=8711 red=432 avgLen=11.10 | elapsed=00:00:08 speed=117508.8 steps/s eta=00:01:16
+[SAVE] train/1000000-v4.pkl (states=50842)
+step=1100000 eps=0.1010 states=53793 avgR=-0.648 deaths=587 green=8860 red=464 avgLen=11.28 | elapsed=00:00:09 speed=117142.1 steps/s eta=00:01:15
+step=1200000 eps=0.0920 states=56548 avgR=-0.626 deaths=581 green=8976 red=419 avgLen=11.49 | elapsed=00:00:10 speed=117363.5 steps/s eta=00:01:14
+step=1300000 eps=0.0830 states=59085 avgR=-0.609 deaths=566 green=8994 red=417 avgLen=11.51 | elapsed=00:00:11 speed=117449.9 steps/s eta=00:01:14
+step=1400000 eps=0.0740 states=61522 avgR=-0.614 deaths=596 green=9181 red=381 avgLen=11.44 | elapsed=00:00:11 speed=117583.2 steps/s eta=00:01:13
+step=1500000 eps=0.0650 states=63963 avgR=-0.566 deaths=594 green=9596 red=374 avgLen=12.05 | elapsed=00:00:12 speed=117660.2 steps/s eta=00:01:12
+step=1600000 eps=0.0560 states=66337 avgR=-0.562 deaths=575 green=9449 red=359 avgLen=12.20 | elapsed=00:00:13 speed=117732.7 steps/s eta=00:01:11
+step=1700000 eps=0.0470 states=68647 avgR=-0.562 deaths=607 green=9735 red=351 avgLen=12.09 | elapsed=00:00:14 speed=117740.6 steps/s eta=00:01:10
+step=1800000 eps=0.0380 states=70844 avgR=-0.535 deaths=597 green=9893 red=358 avgLen=12.22 | elapsed=00:00:15 speed=117636.0 steps/s eta=00:01:09
+step=1900000 eps=0.0290 states=72904 avgR=-0.528 deaths=613 green=10077 red=326 avgLen=12.23 | elapsed=00:00:16 speed=117521.6 steps/s eta=00:01:08
+step=2000000 eps=0.0200 states=74878 avgR=-0.492 deaths=612 green=10410 red=344 avgLen=12.65 | elapsed=00:00:17 speed=117505.3 steps/s eta=00:01:08
+step=2100000 eps=0.0200 states=76821 avgR=-0.478 deaths=575 green=10180 red=316 avgLen=12.91 | elapsed=00:00:17 speed=117330.3 steps/s eta=00:01:07
+step=2200000 eps=0.0200 states=79027 avgR=-0.410 deaths=535 green=10444 red=327 avgLen=13.95 | elapsed=00:00:18 speed=117195.0 steps/s eta=00:01:06
+step=2300000 eps=0.0200 states=80855 avgR=-0.459 deaths=577 green=10369 red=313 avgLen=13.25 | elapsed=00:00:19 speed=117102.6 steps/s eta=00:01:05
+step=2400000 eps=0.0200 states=82832 avgR=-0.440 deaths=550 green=10283 red=294 avgLen=13.42 | elapsed=00:00:20 speed=116981.9 steps/s eta=00:01:04
+step=2500000 eps=0.0200 states=84436 avgR=-0.457 deaths=578 green=10381 red=294 avgLen=13.12 | elapsed=00:00:21 speed=116891.3 steps/s eta=00:01:04
+step=2600000 eps=0.0200 states=86158 avgR=-0.473 deaths=602 green=10448 red=297 avgLen=12.78 | elapsed=00:00:22 speed=116803.2 steps/s eta=00:01:03
+step=2700000 eps=0.0200 states=87878 avgR=-0.460 deaths=563 green=10245 red=327 avgLen=13.29 | elapsed=00:00:23 speed=116646.6 steps/s eta=00:01:02
+step=2800000 eps=0.0200 states=89591 avgR=-0.411 deaths=533 green=10395 red=300 avgLen=13.81 | elapsed=00:00:24 speed=116577.8 steps/s eta=00:01:01
+step=2900000 eps=0.0200 states=91175 avgR=-0.444 deaths=569 green=10421 red=300 avgLen=13.14 | elapsed=00:00:24 speed=116529.5 steps/s eta=00:01:00
+step=3000000 eps=0.0200 states=92730 avgR=-0.436 deaths=561 green=10403 red=282 avgLen=13.46 | elapsed=00:00:25 speed=116400.1 steps/s eta=00:01:00
+step=3100000 eps=0.0200 states=94125 avgR=-0.419 deaths=573 green=10643 red=255 avgLen=13.43 | elapsed=00:00:26 speed=116055.9 steps/s eta=00:00:59
+step=3200000 eps=0.0200 states=95625 avgR=-0.432 deaths=587 green=10647 red=246 avgLen=13.20 | elapsed=00:00:27 speed=115990.3 steps/s eta=00:00:58
+step=3300000 eps=0.0200 states=96969 avgR=-0.453 deaths=575 green=10379 red=278 avgLen=13.00 | elapsed=00:00:28 speed=115912.5 steps/s eta=00:00:57
+step=3400000 eps=0.0200 states=98391 avgR=-0.417 deaths=556 green=10517 red=259 avgLen=13.67 | elapsed=00:00:29 speed=115860.7 steps/s eta=00:00:56
+step=3500000 eps=0.0200 states=99865 avgR=-0.401 deaths=584 green=10926 red=272 avgLen=13.69 | elapsed=00:00:30 speed=115830.2 steps/s eta=00:00:56
+step=3600000 eps=0.0200 states=101216 avgR=-0.443 deaths=578 green=10479 red=256 avgLen=13.32 | elapsed=00:00:31 speed=115742.4 steps/s eta=00:00:55
+step=3700000 eps=0.0200 states=102570 avgR=-0.417 deaths=563 green=10568 red=250 avgLen=13.60 | elapsed=00:00:31 speed=115632.4 steps/s eta=00:00:54
+step=3800000 eps=0.0200 states=103942 avgR=-0.414 deaths=549 green=10493 red=280 avgLen=13.73 | elapsed=00:00:32 speed=115568.8 steps/s eta=00:00:53
+step=3900000 eps=0.0200 states=105144 avgR=-0.432 deaths=547 green=10298 red=253 avgLen=13.34 | elapsed=00:00:33 speed=115512.3 steps/s eta=00:00:52
+step=4000000 eps=0.0200 states=106417 avgR=-0.394 deaths=545 green=10622 red=258 avgLen=13.90 | elapsed=00:00:34 speed=115428.4 steps/s eta=00:00:51
+step=4100000 eps=0.0200 states=107677 avgR=-0.412 deaths=565 green=10636 red=255 avgLen=13.71 | elapsed=00:00:35 speed=115378.1 steps/s eta=00:00:51
+step=4200000 eps=0.0200 states=108909 avgR=-0.419 deaths=554 green=10492 red=277 avgLen=13.61 | elapsed=00:00:36 speed=115291.9 steps/s eta=00:00:50
+step=4300000 eps=0.0200 states=110146 avgR=-0.400 deaths=552 green=10627 red=250 avgLen=13.74 | elapsed=00:00:37 speed=115186.5 steps/s eta=00:00:49
+step=4400000 eps=0.0200 states=111296 avgR=-0.398 deaths=525 green=10387 red=235 avgLen=14.04 | elapsed=00:00:38 speed=115062.6 steps/s eta=00:00:48
+step=4500000 eps=0.0200 states=112500 avgR=-0.390 deaths=566 green=10859 red=268 avgLen=13.94 | elapsed=00:00:39 speed=114955.5 steps/s eta=00:00:47
+step=4600000 eps=0.0200 states=113642 avgR=-0.431 deaths=589 green=10653 red=220 avgLen=13.35 | elapsed=00:00:40 speed=114893.5 steps/s eta=00:00:47
+step=4700000 eps=0.0200 states=114763 avgR=-0.401 deaths=532 green=10444 red=258 avgLen=13.87 | elapsed=00:00:40 speed=114836.6 steps/s eta=00:00:46
+step=4800000 eps=0.0200 states=115920 avgR=-0.438 deaths=560 green=10334 red=226 avgLen=13.35 | elapsed=00:00:41 speed=114806.5 steps/s eta=00:00:45
+step=4900000 eps=0.0200 states=117026 avgR=-0.397 deaths=554 green=10647 red=219 avgLen=13.89 | elapsed=00:00:42 speed=114762.4 steps/s eta=00:00:44
+step=5000000 eps=0.0200 states=118024 avgR=-0.404 deaths=574 green=10790 red=253 avgLen=13.81 | elapsed=00:00:43 speed=114752.0 steps/s eta=00:00:43
+[SAVE] train/5000000-v4.pkl (states=118024)
+step=5100000 eps=0.0200 states=119150 avgR=-0.368 deaths=511 green=10548 red=254 avgLen=14.42 | elapsed=00:00:44 speed=114153.8 steps/s eta=00:00:42
+step=5200000 eps=0.0200 states=120217 avgR=-0.400 deaths=525 green=10361 red=219 avgLen=13.98 | elapsed=00:00:45 speed=114212.4 steps/s eta=00:00:42
+step=5300000 eps=0.0200 states=121190 avgR=-0.413 deaths=549 green=10491 red=260 avgLen=13.61 | elapsed=00:00:46 speed=114269.0 steps/s eta=00:00:41
+step=5400000 eps=0.0200 states=122214 avgR=-0.409 deaths=552 green=10513 red=206 avgLen=13.91 | elapsed=00:00:47 speed=114320.2 steps/s eta=00:00:40
+step=5500000 eps=0.0200 states=123163 avgR=-0.405 deaths=548 green=10521 red=225 avgLen=13.63 | elapsed=00:00:48 speed=114333.4 steps/s eta=00:00:39
+step=5600000 eps=0.0200 states=124160 avgR=-0.418 deaths=536 green=10306 red=235 avgLen=13.78 | elapsed=00:00:48 speed=114388.2 steps/s eta=00:00:38
+step=5700000 eps=0.0200 states=125135 avgR=-0.391 deaths=563 green=10807 red=252 avgLen=13.87 | elapsed=00:00:49 speed=114425.3 steps/s eta=00:00:37
+step=5800000 eps=0.0200 states=126045 avgR=-0.433 deaths=572 green=10480 red=218 avgLen=13.39 | elapsed=00:00:50 speed=114485.3 steps/s eta=00:00:36
+step=5900000 eps=0.0200 states=127029 avgR=-0.393 deaths=517 green=10379 red=251 avgLen=13.98 | elapsed=00:00:51 speed=114534.6 steps/s eta=00:00:35
+step=6000000 eps=0.0200 states=127951 avgR=-0.435 deaths=559 green=10364 red=239 avgLen=13.23 | elapsed=00:00:52 speed=114559.7 steps/s eta=00:00:34
+step=6100000 eps=0.0200 states=129007 avgR=-0.380 deaths=550 green=10775 red=230 avgLen=14.35 | elapsed=00:00:53 speed=114588.2 steps/s eta=00:00:34
+step=6200000 eps=0.0200 states=129927 avgR=-0.396 deaths=549 green=10627 red=237 avgLen=13.77 | elapsed=00:00:54 speed=114631.8 steps/s eta=00:00:33
+step=6300000 eps=0.0200 states=130793 avgR=-0.426 deaths=571 green=10567 red=253 avgLen=13.28 | elapsed=00:00:54 speed=114665.0 steps/s eta=00:00:32
+step=6400000 eps=0.0200 states=131768 avgR=-0.374 deaths=510 green=10479 red=246 avgLen=14.49 | elapsed=00:00:55 speed=114700.2 steps/s eta=00:00:31
+step=6500000 eps=0.0200 states=132697 avgR=-0.372 deaths=568 green=11017 red=239 avgLen=14.10 | elapsed=00:00:56 speed=114720.8 steps/s eta=00:00:30
+step=6600000 eps=0.0200 states=133667 avgR=-0.357 deaths=534 green=10824 red=211 avgLen=14.35 | elapsed=00:00:57 speed=114766.3 steps/s eta=00:00:29
+step=6700000 eps=0.0200 states=134606 avgR=-0.351 deaths=535 green=10914 red=240 avgLen=14.38 | elapsed=00:00:58 speed=114789.6 steps/s eta=00:00:28
+step=6800000 eps=0.0200 states=135408 avgR=-0.391 deaths=538 green=10564 red=226 avgLen=13.87 | elapsed=00:00:59 speed=114811.7 steps/s eta=00:00:27
+step=6900000 eps=0.0200 states=136282 avgR=-0.382 deaths=524 green=10517 red=227 avgLen=14.03 | elapsed=00:01:00 speed=114828.8 steps/s eta=00:00:26
+step=7000000 eps=0.0200 states=137160 avgR=-0.390 deaths=563 green=10803 red=237 avgLen=13.88 | elapsed=00:01:00 speed=114873.5 steps/s eta=00:00:26
+step=7100000 eps=0.0200 states=138039 avgR=-0.407 deaths=566 green=10674 red=231 avgLen=13.84 | elapsed=00:01:01 speed=114888.8 steps/s eta=00:00:25
+step=7200000 eps=0.0200 states=138829 avgR=-0.406 deaths=551 green=10542 red=222 avgLen=13.68 | elapsed=00:01:02 speed=114901.8 steps/s eta=00:00:24
+step=7300000 eps=0.0200 states=139642 avgR=-0.355 deaths=513 green=10662 red=226 avgLen=14.74 | elapsed=00:01:03 speed=114907.7 steps/s eta=00:00:23
+step=7400000 eps=0.0200 states=140509 avgR=-0.361 deaths=497 green=10467 red=231 avgLen=14.82 | elapsed=00:01:04 speed=114932.0 steps/s eta=00:00:22
+step=7500000 eps=0.0200 states=141324 avgR=-0.375 deaths=530 green=10628 red=216 avgLen=14.20 | elapsed=00:01:05 speed=114952.1 steps/s eta=00:00:21
+step=7600000 eps=0.0200 states=142202 avgR=-0.386 deaths=534 green=10591 red=250 avgLen=14.30 | elapsed=00:01:06 speed=114976.2 steps/s eta=00:00:20
+step=7700000 eps=0.0200 states=142983 avgR=-0.384 deaths=549 green=10720 red=218 avgLen=13.98 | elapsed=00:01:06 speed=115005.1 steps/s eta=00:00:19
+step=7800000 eps=0.0200 states=143745 avgR=-0.396 deaths=564 green=10729 red=198 avgLen=13.85 | elapsed=00:01:07 speed=115032.6 steps/s eta=00:00:19
+step=7900000 eps=0.0200 states=144476 avgR=-0.424 deaths=599 green=10803 red=219 avgLen=13.41 | elapsed=00:01:08 speed=115053.9 steps/s eta=00:00:18
+step=8000000 eps=0.0200 states=145254 avgR=-0.401 deaths=553 green=10592 red=211 avgLen=13.91 | elapsed=00:01:09 speed=115071.8 steps/s eta=00:00:17
+step=8100000 eps=0.0200 states=145925 avgR=-0.416 deaths=574 green=10652 red=219 avgLen=13.29 | elapsed=00:01:10 speed=115089.6 steps/s eta=00:00:16
+step=8200000 eps=0.0200 states=146794 avgR=-0.338 deaths=514 green=10823 red=216 avgLen=14.79 | elapsed=00:01:11 speed=115110.0 steps/s eta=00:00:15
+step=8300000 eps=0.0200 states=147516 avgR=-0.368 deaths=541 green=10779 red=198 avgLen=14.12 | elapsed=00:01:12 speed=115121.3 steps/s eta=00:00:14
+step=8400000 eps=0.0200 states=148225 avgR=-0.401 deaths=548 green=10540 red=204 avgLen=13.94 | elapsed=00:01:12 speed=115150.8 steps/s eta=00:00:13
+step=8500000 eps=0.0200 states=148921 avgR=-0.412 deaths=558 green=10539 red=214 avgLen=13.63 | elapsed=00:01:13 speed=115171.5 steps/s eta=00:00:13
+step=8600000 eps=0.0200 states=149542 avgR=-0.419 deaths=565 green=10551 red=226 avgLen=13.35 | elapsed=00:01:14 speed=115179.4 steps/s eta=00:00:12
+step=8700000 eps=0.0200 states=150232 avgR=-0.378 deaths=541 green=10691 red=210 avgLen=14.26 | elapsed=00:01:15 speed=115196.4 steps/s eta=00:00:11
+step=8800000 eps=0.0200 states=150876 avgR=-0.394 deaths=553 green=10657 red=207 avgLen=13.78 | elapsed=00:01:16 speed=115208.9 steps/s eta=00:00:10
+step=8900000 eps=0.0200 states=151569 avgR=-0.388 deaths=530 green=10503 red=210 avgLen=13.95 | elapsed=00:01:17 speed=115228.2 steps/s eta=00:00:09
+step=9000000 eps=0.0200 states=152226 avgR=-0.408 deaths=536 green=10381 red=213 avgLen=13.81 | elapsed=00:01:18 speed=115253.1 steps/s eta=00:00:08
+step=9100000 eps=0.0200 states=152872 avgR=-0.387 deaths=537 green=10563 red=189 avgLen=13.92 | elapsed=00:01:18 speed=115275.0 steps/s eta=00:00:07
+step=9200000 eps=0.0200 states=153527 avgR=-0.377 deaths=549 green=10782 red=221 avgLen=14.03 | elapsed=00:01:19 speed=115288.2 steps/s eta=00:00:06
+step=9300000 eps=0.0200 states=154110 avgR=-0.398 deaths=554 green=10625 red=206 avgLen=13.71 | elapsed=00:01:20 speed=115304.9 steps/s eta=00:00:06
+step=9400000 eps=0.0200 states=154821 avgR=-0.375 deaths=567 green=10951 red=207 avgLen=13.82 | elapsed=00:01:21 speed=115327.2 steps/s eta=00:00:05
+step=9500000 eps=0.0200 states=155489 avgR=-0.396 deaths=539 green=10515 red=208 avgLen=13.97 | elapsed=00:01:22 speed=115340.6 steps/s eta=00:00:04
+step=9600000 eps=0.0200 states=156196 avgR=-0.359 deaths=533 green=10794 red=202 avgLen=14.39 | elapsed=00:01:23 speed=115360.5 steps/s eta=00:00:03
+step=9700000 eps=0.0200 states=156832 avgR=-0.367 deaths=547 green=10849 red=207 avgLen=14.09 | elapsed=00:01:24 speed=115368.4 steps/s eta=00:00:02
+step=9800000 eps=0.0200 states=157457 avgR=-0.396 deaths=567 green=10740 red=176 avgLen=13.85 | elapsed=00:01:24 speed=115372.4 steps/s eta=00:00:01
+step=9900000 eps=0.0200 states=158125 avgR=-0.383 deaths=508 green=10340 red=199 avgLen=14.24 | elapsed=00:01:25 speed=115380.0 steps/s eta=00:00:00
+step=10000000 eps=0.0200 states=158734 avgR=-0.421 deaths=565 green=10535 red=233 avgLen=13.56 | elapsed=00:01:26 speed=115394.9 steps/s eta=00:00:00
+
+=== RESULTATS ===
+Parties: 1000
+Taille moyenne fin: 3.524
+Min: 3
+Max: 10
+Std: 0.890
+Moyenne green/partie: 0.524
+Moyenne red/partie: 0.000
+Deaths: 1000
