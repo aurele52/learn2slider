@@ -52,14 +52,15 @@ def greedy_action_env(
     state_can = _transform_state(state_env, rot_k, mirror)
 
     # fetch Q-values for this canonical key
-    # NOTE: agent.registre is a defaultdict, so agent.registre[key] always exists.
+    # NOTE: agent.registre is a defaultdict, so agent.registre[key] always
+    # exists.
     qvals = agent.registre.get(key)
-    if qvals is None:
-        # unseen state -> default action
-        return 0
 
     # allowed actions must be computed in CANONICAL frame
     allowed_can = allowed_actions_no_suicide_from_state(state_can)
+    if qvals is None:
+        a_can = random.choice(allowed_can)
+        return _canon_to_env_action(a_can, rot_k, mirror)
 
     # greedy in canonical frame
     best_v = max(qvals[a] for a in allowed_can)
@@ -140,6 +141,7 @@ def replay_episode_pygame(
     font = pygame.font.SysFont(None, 22)
 
     while running:
+        advance_one = False
         # events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -158,10 +160,11 @@ def replay_episode_pygame(
                 elif event.key == pygame.K_n:
                     # step unique si paused
                     if paused:
-                        step_per_frame = 1
+                        advance_one = True
 
-        if not paused:
-            for _ in range(step_per_frame):
+        if not paused or advance_one:
+            steps = 1 if advance_one else step_per_frame
+            for _ in range(steps):
                 if step_i >= max_steps:
                     paused = True
                     break
@@ -175,7 +178,9 @@ def replay_episode_pygame(
                 else:
                     state = inter.get_state()
                     a_env = greedy_action_env(
-                        agent, state, deterministic_tiebreak=deterministic_tiebreak
+                        agent,
+                        state,
+                        deterministic_tiebreak=deterministic_tiebreak,
                     )
 
                 direction = intDir(a_env)
@@ -190,7 +195,10 @@ def replay_episode_pygame(
         env.draw_board(screen)
 
         # overlay info
-        txt = f"seed={seed} step={step_i} len={len(env.snake)} paused={'YES' if paused else 'NO'}"
+        txt = f"seed={seed} step={step_i} len={
+    len(
+        env.snake)} paused={
+            'YES' if paused else 'NO'}"
         surf = font.render(txt, True, (255, 255, 255))
         screen.blit(surf, (8, 8))
 

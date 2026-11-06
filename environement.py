@@ -64,7 +64,9 @@ class Environment:
         head: Optional[Pos] = self.snake[0] if self.snake else None
 
         # On démarre tout en EMPTY
-        grid = [[Tile.EMPTY for _ in range(self.WIDTH)] for _ in range(self.HEIGHT)]
+        grid = [
+            [Tile.EMPTY for _ in range(self.WIDTH)] for _ in range(self.HEIGHT)
+        ]
 
         # Pose dans un ordre "priorité" (mur > pommes > serpent)
         for x, y in self.walls:
@@ -119,7 +121,9 @@ class Environment:
 
                 px = x * self.SQUARE + x * self.LINE + self.LINE
                 py = y * self.SQUARE + y * self.LINE + self.LINE
-                pygame.draw.rect(screen, color, (px, py, self.SQUARE, self.SQUARE))
+                pygame.draw.rect(
+                    screen, color, (px, py, self.SQUARE, self.SQUARE)
+                )
 
     # ----------------------------
     # Game init
@@ -137,7 +141,9 @@ class Environment:
 
     def _rebuild_free_tiles(self):
         """Recalcule freeTiles à partir des sets (utile au reset)."""
-        occupied = self.walls | self.snake_set | self.green_apples | self.red_apples
+        occupied = (
+            self.walls | self.snake_set | self.green_apples | self.red_apples
+        )
         self.freeTiles = set(self.ALL_TILES - occupied)
 
     def _place_snake_random(self):
@@ -264,13 +270,15 @@ class Environment:
         if ate_red and not ate_green:
             remove_count += 1
 
-        # Positions "autorisées" dans le corps : les dernières cases qui vont être supprimées
+        # Positions "autorisées" dans le corps : les dernières cases qui vont
+        # être supprimées
         removable = set()
         if remove_count > 0:
             k = min(remove_count, len(self.snake))
             removable = set(list(self.snake)[-k:])
 
-        # collision snake : OK si on va sur une case qui est en train d'être libérée
+        # collision snake : OK si on va sur une case qui est en train d'être
+        # libérée
         if next_pos in self.snake_set and next_pos not in removable:
             return Tile.BODY
 
@@ -288,7 +296,8 @@ class Environment:
             # pas de pop => grandit
         else:
             tail_pos = self.snake.pop()
-            # IMPORTANT: si on a avancé sur la queue, tail_pos == next_pos => NE PAS retirer du set / NE PAS libérer
+            # IMPORTANT: si on a avancé sur la queue, tail_pos == next_pos =>
+            # NE PAS retirer du set / NE PAS libérer
             if tail_pos != next_pos:
                 self.snake_set.remove(tail_pos)
                 self._free(tail_pos)
@@ -302,12 +311,15 @@ class Environment:
             # shrink: pop 1 de plus (uniquement si on n'a pas mangé green)
             if not ate_green and self.snake:
                 tail2 = self.snake.pop()
-                # Même principe: ne pas retirer/libérer si c'est la nouvelle tête
+                # Même principe: ne pas retirer/libérer si c'est la nouvelle
+                # tête
                 if tail2 != next_pos:
                     self.snake_set.remove(tail2)
                     self._free(tail2)
 
             if len(self.snake) == 0:
+                self.snake_set.clear()
+                self._rebuild_free_tiles()
                 return Tile.WALL
 
         return newTile

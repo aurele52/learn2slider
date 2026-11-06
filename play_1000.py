@@ -12,7 +12,8 @@ from utils import intDir
 
 # IMPORTANT (v6):
 # Agent.registre is keyed by packed+canonical INT, not by the raw state tuple.
-# So evaluation must canonicalize+pack the state and read Q-values with that key.
+# So evaluation must canonicalize+pack the state and read Q-values with
+# that key.
 from agent import _canonical_pack_key, _transform_state, _canon_to_env_action
 
 
@@ -24,13 +25,13 @@ def greedy_action_no_suicide(agent: Agent, state_env) -> int:
     use_mirror = getattr(agent, "use_mirror", True)
 
     # canonicalize+pack (same as training)
-    key, (rot_k, mirror) = _canonical_pack_key(state_env, use_mirror=use_mirror)
+    key, (rot_k, mirror) = _canonical_pack_key(
+        state_env, use_mirror=use_mirror
+    )
     state_can = _transform_state(state_env, rot_k, mirror)
 
     # Q-values for canonical key
     values = agent.registre.get(key)
-    if values is None:
-        return 0
 
     # actions autorisées = pas mur/body à 1 case (computed in CANONICAL frame)
     allowed_can = []
@@ -44,6 +45,10 @@ def greedy_action_no_suicide(agent: Agent, state_env) -> int:
 
     if not allowed_can:
         allowed_can = [0, 1, 2, 3]  # obligé
+
+    if values is None:
+        a_can = random.choice(allowed_can)
+        return _canon_to_env_action(a_can, rot_k, mirror)
 
     best_v = max(values[a] for a in allowed_can)
     best = [a for a in allowed_can if values[a] == best_v]
@@ -82,6 +87,9 @@ def evaluate(
     results = []
     greens = []
     reds = []
+    max_lengths = []
+    durations = []
+    capped = 0
     deaths = 0
 
     start = time.perf_counter()
@@ -90,21 +98,40 @@ def evaluate(
         env.reset_game()
         ep_green = 0
         ep_red = 0
+        max_length = len(env.snake)
+        steps = 0
+        finished = False
 
         for _ in range(max_steps_per_ep):
             state = inter.get_state()
             action_env = greedy_action_no_suicide(agent, state)
             direction = intDir(action_env)
 
+            hx, hy = env.snake[0]
+            dx, dy = direction
+            target = (hx + dx, hy + dy)
+            ate_green = target in env.green_apples
+            ate_red = target in env.red_apples
+
             reward, done = inter.apply_dir(direction)
-            if reward == 10:
+            steps += 1
+            max_length = max(max_length, len(env.snake))
+
+            if ate_green:
                 ep_green += 1
-            elif reward == -10:
+            if ate_red:
                 ep_red += 1
 
             if done:
                 deaths += 1
+                finished = True
                 break
+
+        if not finished:
+            capped += 1
+
+        max_lengths.append(max_length)
+        durations.append(steps)
 
         results.append(len(env.snake))
         greens.append(ep_green)
@@ -112,8 +139,12 @@ def evaluate(
 
         if render_progress_every and ep % render_progress_every == 0:
             elapsed = time.perf_counter() - start
-            avg_len = sum(results[-render_progress_every:]) / render_progress_every
-            avg_g = sum(greens[-render_progress_every:]) / render_progress_every
+            avg_len = (
+                sum(results[-render_progress_every:]) / render_progress_every
+            )
+            avg_g = (
+                sum(greens[-render_progress_every:]) / render_progress_every
+            )
             avg_r = sum(reds[-render_progress_every:]) / render_progress_every
             print(
                 f"ep={ep}/{episodes} elapsed={elapsed:.2f}s "
@@ -140,11 +171,26 @@ def evaluate(
     print(f"Moyenne green/partie: {avg_g:.3f}")
     print(f"Moyenne red/partie: {avg_r:.3f}")
     print(f"Deaths: {deaths}")
+    print(f"Parties limitees par max_steps: {capped}")
+    print(f"Duree moyenne: {sum(durations) / len(durations):.2f}")
+    print(f"Duree maximale: {max(durations)}")
+    print(f"Longueur maximale atteinte: {max(max_lengths)}")
+
+    success = sum(length >= 10 for length in max_lengths)
+    success_final = sum(length >= 10 for length in results)
+
+    print(f"Parties ayant atteint 10: {success}/{episodes}")
+    print(f"Taux de reussite: {100 * success / episodes:.2f}%")
+    print(f"Parties terminees avec 10+: {success_final}/{episodes}")
+    print(f"Pommes vertes mangees: {sum(greens)}")
+    print(f"Pommes rouges mangees: {sum(reds)}")
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python play_1000.py train/10000000-v6.pkl [episodes] [max_steps]")
+        print(
+            "Usage: python play_1000.py train/10000000-v6.pkl [episodes] [max_steps]"
+        )
         sys.exit(1)
 
     model = sys.argv[1]

@@ -7,7 +7,9 @@ from collections import defaultdict
 
 # -------- Types (same observation format as Interpreter.get_state) --------
 DirFeat = Tuple[int, int, int, int]  # (wall, green, red, body)
-StateType = Tuple[DirFeat, DirFeat, DirFeat, DirFeat]  # (up, right, down, left)
+StateType = Tuple[
+    DirFeat, DirFeat, DirFeat, DirFeat
+]  # (up, right, down, left)
 
 # -------- Symmetries (URDL indices: 0=UP, 1=RIGHT, 2=DOWN, 3=LEFT) --------
 # IMPORTANT:
@@ -76,7 +78,8 @@ def _canon_to_env_action(a_can: int, rot_k: int, mirror: bool) -> int:
 
 
 def _pack_state_16_base5(state_urdl: StateType) -> int:
-    # flatten order: U feats then R then D then L, each feats=(wall,green,red,body)
+    # flatten order: U feats then R then D then L, each
+    # feats=(wall,green,red,body)
     key = 0
     i = 0
     for d in range(4):
@@ -125,7 +128,8 @@ class Agent:
         eps_end: float = 0.0,
         eps_decay_steps: int = 200_000,
         seed: Optional[int] = None,
-        use_mirror: bool = True,  # rotations only by default; set True to enable reflections too
+        use_mirror: bool = True,
+        # rotations only by default; set True to enable reflections too
     ):
         # Q-table: key(int) -> mutable array('f',4)
         self.registre = defaultdict(lambda: array("f", [0.0, 0.0, 0.0, 0.0]))
@@ -193,7 +197,9 @@ class Agent:
         a_env = _canon_to_env_action(a_can, rot_k, mirror)
         return a_env
 
-    def changeLast(self, reward: float, next_state_env: StateType, done: bool) -> None:
+    def changeLast(
+        self, reward: float, next_state_env: StateType, done: bool
+    ) -> None:
         """
         Update Q using the CANONICAL action stored in lastChoice_can.
         next_state is canonicalized+packed too (independent canonicalization is fine).
@@ -201,7 +207,9 @@ class Agent:
         if self.lastKey is None:
             return
 
-        next_key, _ = _canonical_pack_key(next_state_env, use_mirror=self.use_mirror)
+        next_key, _ = _canonical_pack_key(
+            next_state_env, use_mirror=self.use_mirror
+        )
 
         q = self.registre[self.lastKey]
         a = self.lastChoice_can
@@ -223,7 +231,8 @@ class Agent:
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
 
-        # defaultdict(lambda: ...) not safely picklable due to lambda -> save as plain dict
+        # defaultdict(lambda: ...) not safely picklable due to lambda -> save
+        # as plain dict
         registre_plain = {k: v for k, v in self.registre.items()}
 
         payload = {
