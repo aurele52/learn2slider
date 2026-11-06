@@ -67,7 +67,7 @@ def model_files(agent_type):
             list(Path("models").glob("*.pkl"))
             + list(Path("train").glob("*.pkl"))
         )
-        preferred = Path("train/1000000-v6.pkl")
+        preferred = Path("models/qtable-best.pkl")
 
     files = [p for p in files if p.is_file()]
     files.sort(
