@@ -19,7 +19,13 @@ class Environment:
 
     # set de toutes les tileules possibles (constant)
 
-    def __init__(self) -> None:
+    def __init__(self, width=10, height=10) -> None:
+        if width < 3 or height < 3:
+            raise ValueError(
+                "Le plateau doit mesurer au minimum 3x3."
+            )
+        self.WIDTH = width
+        self.HEIGHT = height
         self.ALL_TILES = {
             (x, y) for y in range(self.HEIGHT) for x in range(self.WIDTH)
         }  # state
